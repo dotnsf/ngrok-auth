@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3c.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<meta charset="utf8"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<title>ngrok auth</title>
+</head>
+<body>
+<h1>
+<% if( headers && headers['ngrok-auth-user-name'] ){ %>
+    <%= headers['ngrok-auth-user-name'] %>
+<% }else{ %>
+    Anonymous
+<% } %>
+</h1>
+
+<p>
+<% if( headers && headers['ngrok-auth-user-name'] ){ %>
+    <%= headers['ngrok-auth-user-name'] %> ( <%= headers['ngrok-auth-user-email'] %> )
+<% }else{ %>
+    Anonymous User
+<% } %>
+</p>
+
+</body>
+</html>
